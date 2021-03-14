@@ -77,7 +77,14 @@ const Card = ({ data, enrollment }) => {
       </h1>
       <div style={{ alignSelf: "center" }}>
         <p>{yogaClass.location}</p>
-        <p>{timeStr}</p>
+        <p style={{ fontStyle: "italic", color: "#777" }}>
+          {yogaClass.start.toDate().toLocaleDateString(undefined, {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          })}
+        </p>
+        <p style={{ fontStyle: "italic", color: "#777" }}>{timeStr}</p>
         <p>{"$" + yogaClass.cost}</p>
       </div>
       {Object.keys(user).length === 0 ? (

@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { FirebaseContext } from "../../context/Firebase";
 import { UserContext } from "../../context/UserContext";
 import UserModal from "./UserModal";
+import logo from "../../images/sophieLogo.png";
 
 import { TheHeader, HeaderContainer, LoginButton } from "../StyledComponents";
 
@@ -18,6 +19,18 @@ const Header = () => {
   return (
     <TheHeader>
       <HeaderContainer>
+        <img
+          src={logo}
+          style={{
+            height: "75px",
+            marginRight: "20px",
+            alignSelf: "center",
+            margin: "auto 10px auto auto",
+            borderRadius: "5px",
+            boxShadow: "5px 5px 10px rgba(0,0,0,0.5)",
+          }}
+          alt=""
+        />
         <h1
           style={{ margin: 0, color: "white" }}
           onClick={() => console.log(user)}

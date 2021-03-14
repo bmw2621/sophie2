@@ -30,7 +30,7 @@ export const HeaderContainer = styled.div`
   max-width: 960px;
   padding: 1.45rem 1.0875rem;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: auto 3fr 1fr 1fr;
   align-items: center;
 `;
 

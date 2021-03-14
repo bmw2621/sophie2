@@ -20,6 +20,17 @@ const fadeIn = keyframes`
   }
 `;
 
+const appear = keyframes`
+  from {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
 export const TheHeader = styled.header`
   background: var(--primary);
   margin-bottom: 1.45rem;
@@ -109,4 +120,35 @@ export const LoginInput = styled.input`
   border-radius: 5px;
   text-align: center;
   font-size: 1.5rem;
+`;
+
+export const CardContainer = styled.div`
+  width: 280px;
+  height: 350px;
+  justify-self: center;
+  display: grid;
+  grid-template-row: repeat(3, 1fr);
+  padding: 30px;
+  border: 1px solid lightgray;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  animation: ${appear};
+  animation-duration: 0.4s;
+  animation-delay: ${(props) => `${props.index * 0.1}s`};
+  animation-timing-function: cubic-bezier(0.37, 0.22, 0.6, 1.92);
+  animation-fill-mode: forwards;
+  opacity: 0;
+  & * {
+    margin: 0;
+  }
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  height: 2rem;
+  background: ${(props) => (props.disabled ? "lightgray" : "var(--primary)")};
+  align-self: end;
+  justify-self: center;
+  color: ${(props) => (props.disabled ? "darkgray" : "white")};
+  border: 0;
+  border-radius: 5px;
 `;

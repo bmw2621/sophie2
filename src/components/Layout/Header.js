@@ -31,12 +31,7 @@ const Header = () => {
           }}
           alt=""
         />
-        <h1
-          style={{ margin: 0, color: "white" }}
-          onClick={() => console.log(user)}
-        >
-          Yoga with Sophie
-        </h1>
+        <h1 style={{ margin: 0, color: "white" }}>Feelin' like Yoga</h1>
 
         <div style={{ color: "lightgray", textAlign: "right" }}>
           {Object.keys(user).length > 1 ? user.displayName : ""}

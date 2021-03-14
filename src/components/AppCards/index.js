@@ -31,13 +31,14 @@ const AppCards = ({ yogaClasses }) => {
 
   return (
     <CardsContainer>
-      {yogaClasses.map((classData) => (
+      {yogaClasses.map((classData, i) => (
         <Card
           key={classData.id}
           data={classData}
           enrollment={userClasses.filter(
             (yogaClass) => yogaClass.classId === classData.id
           )}
+          index={i}
         />
       ))}
     </CardsContainer>

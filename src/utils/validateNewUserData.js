@@ -22,7 +22,6 @@ const verifyNewUserData = ({
   }
 
   if (!emailTest.test(email.toLowerCase())) {
-    console.log("email test");
     document.getElementById("email").style.border = "2px solid red";
     isValid = false;
   } else {

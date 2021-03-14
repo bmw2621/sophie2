@@ -59,7 +59,6 @@ const UserModal = ({ setModal }) => {
     firebase
       .manualLogin(userEmail, userPassword)
       .then((user) => {
-        console.log(user);
         userDispatch({ type: "LOAD_USER", userData: user });
         setModal(false);
       })

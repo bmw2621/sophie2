@@ -13,6 +13,7 @@ function App() {
     () =>
       firebase.db
         .collection("classes")
+        .orderBy("start")
         .get()
         .then((classes) => setClasses(classes.docs))
         .catch(console.error),

@@ -16,7 +16,7 @@ const fadeIn = keyframes`
     opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: inherit;
   }
 `;
 
@@ -77,6 +77,8 @@ export const LoginModal = styled.div`
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   opacity: 0;
+  background: white;
+  z-index: 1000 important!;
 
   & * {
     margin-bottom: 10px;
@@ -135,8 +137,7 @@ export const CardContainer = styled.div`
   animation-duration: 0.4s;
   animation-delay: ${(props) => `${props.index * 0.1}s`};
   animation-timing-function: cubic-bezier(0.37, 0.22, 0.6, 1.92);
-  animation-fill-mode: forwards;
-  opacity: 0;
+  animation-fill-mode: backwards;
   & * {
     margin: 0;
   }

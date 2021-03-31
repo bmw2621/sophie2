@@ -32,25 +32,26 @@ const appear = keyframes`
 `;
 
 export const TheHeader = styled.header`
-  background: var(--primary);
-  margin-bottom: 1.45rem;
+  position: sticky;
+  top: 0;
 `;
 
 export const HeaderContainer = styled.div`
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1080px;
   padding: 1.45rem 1.0875rem;
   display: grid;
-  grid-template-columns: auto 3fr 1fr 1fr;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
 `;
 
 export const ModalBG = styled.div`
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   background: rgba(0, 0, 0, 0.6);
   animation: ${fadeIn};
   animation-duration: 1s;
@@ -131,8 +132,9 @@ export const CardContainer = styled.div`
   display: grid;
   grid-template-row: repeat(3, 1fr);
   padding: 30px;
-  border: 1px solid lightgray;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px var(--secondary);
+  background: white;
   animation: ${appear};
   animation-duration: 0.4s;
   animation-delay: ${(props) => `${props.index * 0.1}s`};
@@ -146,10 +148,15 @@ export const CardContainer = styled.div`
 export const Button = styled.button`
   width: 100%;
   height: 2rem;
-  background: ${(props) => (props.disabled ? "lightgray" : "var(--primary)")};
+  background: ${(props) =>
+    props.disabled
+      ? "lightgray"
+      : props.inClass
+      ? "var(--secondary)"
+      : "var(--primary)"};
   align-self: end;
   justify-self: center;
-  color: ${(props) => (props.disabled ? "darkgray" : "white")};
+  color: ${(props) => (props.disabled ? "var(--secondary)" : "white")};
   border: 0;
   border-radius: 5px;
 `;

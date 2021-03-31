@@ -48,7 +48,13 @@ const Card = ({ data, enrollment, index }) => {
 
   return (
     <CardContainer index={index}>
-      <h1 style={{ textAlign: "center", alignSelf: "center" }}>
+      <h1
+        style={{
+          textAlign: "center",
+          alignSelf: "center",
+          color: "var(--primary)",
+        }}
+      >
         {yogaClass.title}
       </h1>
       <div style={{ alignSelf: "center" }}>
@@ -66,7 +72,10 @@ const Card = ({ data, enrollment, index }) => {
       {Object.keys(user).length === 0 ? (
         <Button disabled={true}>Sign Up</Button>
       ) : enrollment.length > 0 ? (
-        <Button onClick={() => handleDropClass(enrollment[0].enrollmentId)}>
+        <Button
+          inClass
+          onClick={() => handleDropClass(enrollment[0].enrollmentId)}
+        >
           Drop Class
         </Button>
       ) : (

@@ -19,20 +19,6 @@ const Header = () => {
   return (
     <TheHeader>
       <HeaderContainer>
-        <img
-          src={logo}
-          style={{
-            height: "75px",
-            marginRight: "20px",
-            alignSelf: "center",
-            margin: "auto 10px auto auto",
-            borderRadius: "5px",
-            boxShadow: "5px 5px 10px rgba(0,0,0,0.5)",
-          }}
-          alt=""
-        />
-        <h1 style={{ margin: 0, color: "white" }}>Feelin' like Yoga</h1>
-
         <div style={{ color: "lightgray", textAlign: "right" }}>
           {Object.keys(user).length > 1 ? user.displayName : ""}
         </div>

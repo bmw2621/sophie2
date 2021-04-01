@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { FirebaseContext } from "../../context/Firebase";
 import { UserContext } from "../../context/UserContext";
 import UserModal from "./UserModal";
-import logo from "../../images/sophieLogo.png";
 
 import { TheHeader, HeaderContainer, LoginButton } from "../StyledComponents";
 

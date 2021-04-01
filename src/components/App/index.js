@@ -36,14 +36,14 @@ function App() {
           marginBottom: "200px",
         }}
       >
-        <img src={Logo} style={{ marginTop: "-50px" }} />
+        <img alt={"logo"} src={Logo} style={{ marginTop: "-50px" }} />
         <span
           style={{
             fontFamily: "Salted Mocha",
             color: "white",
             textShadow: "5px 5px 10px rgba(0,0,0,0.5)",
             // fontWeight: "600",
-            fontSize: "10vw",
+            fontSize: "9vw",
             margin: "30px 0",
           }}
         >
